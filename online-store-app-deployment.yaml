@@ -16,23 +16,10 @@ spec:
     spec:
       containers:
       - name: onlinestore
-        image: your-dockerhub-username/onlinestore:latest
+        image:prmd77/onlinestore:v1.0
         ports:
         - containerPort: 8080
-        env:
-        - name: SPRING_DATASOURCE_URL
-          value: "jdbc:mysql://mysql-service:3306/onlinestore"
-        - name: SPRING_DATASOURCE_USERNAME
-          value: "root"
-        - name: SPRING_DATASOURCE_PASSWORD
-          value: "password"
-        resources:
-          requests:
-            memory: "512Mi"
-            cpu: "250m"
-          limits:
-            memory: "1Gi"
-            cpu: "500m"
+       
 ---
 apiVersion: v1
 kind: Service
