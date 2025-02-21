@@ -30,7 +30,7 @@ spec:
     app: onlinestore
   ports:
     - protocol: TCP
-      port: 80
+      port: 8080
       targetPort: 8080
   type: NodePort
   nodePort: 32040  # Exposed port on the node
