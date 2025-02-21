@@ -27,9 +27,9 @@ metadata:
 spec:
   selector:
     app: online-store
+  type: NodePort
   ports:
     - protocol: TCP
       port: 8080
       targetPort: 80
-  type: NodePort
-  nodePort: 32040
+      nodePort: 32040
