@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: online-store-container
-        image: prmd77/onlinestore
+        image: prmd77/onlinestore:v1.0
         ports:
         - containerPort: 80
 ---
