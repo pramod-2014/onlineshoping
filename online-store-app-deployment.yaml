@@ -5,7 +5,7 @@ metadata:
   labels:
     app: online-store
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: online-store
@@ -18,7 +18,7 @@ spec:
       - name: online-store-container
         image: prmd77/onlinestore:v1.0
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -31,5 +31,5 @@ spec:
   ports:
     - protocol: TCP
       port: 8080
-      targetPort: 80
+      targetPort: 8080
       nodePort: 32040
